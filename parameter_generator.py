@@ -97,8 +97,8 @@ def get_rescue_prime_parameters(p, m, capacity, security_level=128):
 if __name__ == "__main__":
     # Parameters from implementation.js
     p = 21888242871839275222246405745257275088548364400416034343698204186575808495617
-    m = 12
-    capacity = 4
+    m = 2
+    capacity = 1
     security_level = 128
     
     print(f"Generating parameters for p={p}, m={m}, capacity={capacity}, security_level={security_level}...")
