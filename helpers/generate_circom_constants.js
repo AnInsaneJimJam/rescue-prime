@@ -1,6 +1,6 @@
 
 const fs = require('fs');
-const { parameters } = require('./parameters');
+const { parameters } = require('../js_implementation/parameters');
 
 const [p, m, capacity, security_level, alpha, alphainv, N, MDS, round_constants] = parameters;
 
@@ -39,5 +39,5 @@ for (let i = 0; i < round_constants.length; i++) {
 circomContent += `    return RC[k];\n`;
 circomContent += "}\n";
 
-fs.writeFileSync('constants.circom', circomContent);
+fs.writeFileSync('../circom_implementation/constants.circom', circomContent);
 console.log("constants.circom generated");
