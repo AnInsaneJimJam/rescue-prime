@@ -1,0 +1,20 @@
+{
+  "name": "rescue-prime",
+  "version": "1.0.0",
+  "description": "",
+  "main": "constants.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnInsaneJimJam/rescue-prime.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnInsaneJimJam/rescue-prime/issues"
+  },
+  "homepage": "https://github.com/AnInsaneJimJam/rescue-prime#readme"
+}
