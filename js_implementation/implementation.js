@@ -31,7 +31,7 @@ function matMul(M, v, p) {
 function rescue_prime_wrapper(parameters, input_sequence) {
     let [p, m, capacity, security_level, alpha, alphainv, N, MDS, round_constants] = parameters;
     let rate = m - capacity;
-    
+
     let elements = [];
     if (typeof input_sequence === 'string') {
         for (let i = 0; i < input_sequence.length; i++) {
@@ -73,29 +73,29 @@ function rescue_prime_hash(parameters, input_sequence) {
 
 function rescue_XLIX_permutation(parameters, state) {
     let [p, m, capacity, security_level, alpha, alphainv, N, MDS, round_constants] = parameters;
-    
+
     for (let i = 0; i < N; i++) {
         // 1. S-BOX: x -> x^alpha
         for (let j = 0; j < m; j++) {
             state[j] = modPow(state[j], alpha, p);
         }
-        
+
         // 2. MDS: M * state
         state = matMul(MDS, state, p);
-        
+
         // 3. Round Constants 
         for (let j = 0; j < m; j++) {
             state[j] = mod(state[j] + round_constants[i * 2 * m + j], p);
         }
-        
+
         // 4. Inverse S-BOX: x -> x^(alphainv)
         for (let j = 0; j < m; j++) {
             state[j] = modPow(state[j], alphainv, p);
         }
-        
+
         // 5. MDS: M * state
         state = matMul(MDS, state, p);
-        
+
         // 6. Round Constants
         for (let j = 0; j < m; j++) {
             state[j] = mod(state[j] + round_constants[i * 2 * m + m + j], p);

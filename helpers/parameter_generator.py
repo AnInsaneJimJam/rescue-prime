@@ -1,4 +1,4 @@
-#This code is directly taken from: https://eprint.iacr.org/2020/1143.pdf
+#Most of the code is directly taken from: https://eprint.iacr.org/2020/1143.pdf
 
 try:
     from sage.all import *
