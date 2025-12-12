@@ -1,7 +1,7 @@
 
 const implementation = require('./implementation');
 
-const { parameters } = require('./constants2');
+const { parameters } = require('./parameters');
 const { rescue_prime_wrapper } = require('./implementation');
 
 console.log("Running Rescue Prime Hash Test...");
