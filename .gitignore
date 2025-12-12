@@ -1,0 +1,25 @@
+# Node.js
+node_modules/
+
+# Circom Generated Artifacts
+*.r1cs
+*.sym
+*.ptau
+*.zkey
+*.wtns
+*.wasm
+
+# Proofs and Keys
+proof.json
+public.json
+verification_key.json
+
+# Generated Folders
+*_js/
+*_cpp/
+
+# Auto-generated Source Files
+circom_implementation/constants.circom
+
+# System
+.DS_Store
